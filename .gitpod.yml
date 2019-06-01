@@ -5,10 +5,11 @@ tasks:
     # FIXME successfully writes to .bashrc but doesn't automatically load changes
     #- command: "cat bashrc >> ~/.bashrc"
     #- command: "source ~/.bashrc"
-    - command: "./setup.sh"
+    - init: "./setup.sh"
+      command: "./run.sh"
     #- command: "nohup pip3 install -r requirements.txt > /dev/null 2>&1 & ; exit"
     #- command: "nohup ./bitcoin.sh > ~/.bitcoin.log 2>&1 & ; exit"
-    - command: "code hello.py && clear"
+    - init: "code hello.py && clear"
 
 ports:
     - port: 18832
