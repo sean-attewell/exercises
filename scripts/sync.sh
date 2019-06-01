@@ -6,7 +6,7 @@ NETWORK_DIRECTORY="$BITCOIN_DATA_DIR/testnet3"
 TAR_NAME="$(basename $UTXO_DOWNLOAD_LINK)"
 TAR_FILE="$BITCOIN_DATA_DIR/$TAR_NAME"
 
-echo 'cd to data dir: "$($BITCOIN_DATA_DIR)"'
+echo "cd to data dir: \"$BITCOIN_DATA_DIR\""
 cd $BITCOIN_DATA_DIR
 echo 'cwd: "$(pwd)"'
 
