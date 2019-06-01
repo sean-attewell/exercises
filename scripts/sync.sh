@@ -6,8 +6,6 @@ NETWORK_DIRECTORY="$BITCOIN_DATA_DIR/testnet3"
 TAR_NAME="$(basename $UTXO_DOWNLOAD_LINK)"
 TAR_FILE="$BITCOIN_DATA_DIR/$TAR_NAME"
 
-cd $BITCOIN_DATA_DIR
-
 if [ ! -d $NETWORK_DIRECTORY ]; then
     echo "Creating testnet data dir"
     mkdir -p $NETWORK_DIRECTORY;
