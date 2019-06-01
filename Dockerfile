@@ -1,5 +1,5 @@
 FROM gitpod/workspace-full:latest
-USER ROOT
+USER root
 RUN sudo npm install -g tldr
 RUN sudo python3 -m pip install -r requirements.txt
 RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
