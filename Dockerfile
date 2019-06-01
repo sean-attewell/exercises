@@ -12,8 +12,8 @@ RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
 
 
 
-echo "testnet-cli='bitcoin-cli -testnet -datadir=/workspace/exercises/.bitcoin'" >> $HOME/.bashrc
-echo "testnetd='bitcoind -testnet -datadir=/workspace/exercises/.bitcoin'" >> $HOME/.bashrc
+RUN echo "testnet-cli='bitcoin-cli -testnet -datadir=/workspace/exercises/.bitcoin'" >> $HOME/.bashrc
+RUN echo "testnetd='bitcoind -testnet -datadir=/workspace/exercises/.bitcoin'" >> $HOME/.bashrc
 
 
 #USER root
