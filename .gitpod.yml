@@ -5,6 +5,6 @@ tasks:
     - command: "pip3 install -r requirements.txt"
     - command: "nohup ./bitcoin.sh > ~/.bitcoin.log 2>&1 &"
     #- command: "cat bashrc >> ~/.bashrc"
-    - command: "source ~/.bashrc"
+    #- command: "source ~/.bashrc"
     - command: "clear"
 
