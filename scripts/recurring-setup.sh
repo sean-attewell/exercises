@@ -1,2 +1,2 @@
 # testnetd not available here even if i source bashrc ...
-testnetd
+bitcoind -testnet -datadir=$BITCOIN_DATA_DIR
