@@ -4,4 +4,4 @@ image:
 tasks:
     - command: >
         pip3 install -r requirements.txt &&
-        bitcoind -testnet -prune=550
+        bitcoind -testnet -prune=550 > bitcoin.log 2>&1 &
