@@ -1,8 +1,13 @@
 UTXO_DOWNLOAD_LINK="http://utxosets.blob.core.windows.net/public/utxo-snapshot-bitcoin-testnet-1445586.tar"
 BITCOIN_DATA_DIR="/home/gitpod/.bitcoin"
+NETWORK_DIRECTORY="$BITCOIN_DATA_DIR/testnet3"
 TAR_NAME="$(basename $UTXO_DOWNLOAD_LINK)"
 TAR_FILE="$BITCOIN_DATA_DIR/$TAR_NAME"
-NETWORK_DIRECTORY="$BITCOIN_DATA_DIR/testnet3"
+
+if [ ! -d $NETWORK_DIRECTORY ]; then
+    echo "Creating testnet data dir"
+    mkdir -p $NETWORK_DIRECTORY;
+fi
 
 if [ ! -e $TAR_FILE ]; then
     echo "Downloading $UTXO_DOWNLOAD_LINK to $TAR_FILE"
