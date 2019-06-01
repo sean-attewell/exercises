@@ -1,6 +1,6 @@
 #image: justinmoon/mooniversity:0.0.1
 image:
-    - file: Dockerfile
+    file: Dockerfile
 tasks:
     - command: >
         pip3 install -r requirements.txt &&
