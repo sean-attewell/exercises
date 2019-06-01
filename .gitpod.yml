@@ -12,7 +12,7 @@ tasks:
     - init: "code hello.py && clear"
 
 ports:
-    - port: 18832
+    - port: 18332
       onOpen: ignore
-    - port: 18833
+    - port: 18333
       onOpen: ignore
