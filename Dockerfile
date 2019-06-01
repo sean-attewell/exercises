@@ -15,8 +15,9 @@ COPY scripts/bashrc.sh .
 RUN echo FUCK
 RUN cat bashrc.sh >> $HOME/.bashrc
 
-COPY scripts/bitcoin.conf /workspace/bitcoin/bitcoin.conf
-
+COPY scripts/bitcoin.conf .
+RUN mkdir /workspace/bitcoin \
+    && mv bitcoin.conf /workspace/bitcoin/bitcoin.conf
 #RUN echo "alias testnet-cli='bitcoin-cli -testnet -datadir=/workspace/exercises/.bitcoin'" >> $HOME/.bashrc
 #RUN echo "alias mainnet-cli='bitcoin-cli -rpcuser=bitcoin -rpcpassword=python -rpcconnect=68.183.110.103'" >> $HOME/.bashrc
 #RUN echo "alias testnetd='bitcoind -testnet -datadir=/workspace/exercises/.bitcoin -prune=550'" >> $HOME/.bashrc
