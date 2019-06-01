@@ -2,6 +2,5 @@
 
 ### gitpod notes
 
-image:
-    file: Dockerfile
+https://hackernoon.com/publish-your-docker-image-to-docker-hub-10b826793faf
 
