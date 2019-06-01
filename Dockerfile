@@ -9,4 +9,5 @@ RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
     && sudo apt-get install bitcoind \
     && python3 -m pip install -r requirements.txt
 
+ENV PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shims:$PATH
 USER root
