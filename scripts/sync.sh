@@ -6,12 +6,9 @@ NETWORK_DIRECTORY="$BITCOIN_DATA_DIR/testnet3"
 TAR_NAME="$(basename $UTXO_DOWNLOAD_LINK)"
 TAR_FILE="$BITCOIN_DATA_DIR/$TAR_NAME"
 
-echo "cd to data dir: \"$BITCOIN_DATA_DIR\""
-cd $BITCOIN_DATA_DIR
-echo 'cwd: "$(pwd)"'
 
 if [ ! -d $NETWORK_DIRECTORY ]; then
-    echo "Creating testnet data dir"
+    echo "Creating testnet data dir: $NETWORK_DIRECTORY"
     mkdir -p $NETWORK_DIRECTORY;
 fi
 
@@ -22,10 +19,6 @@ else
     echo "Already downloaded $UTXO_DOWNLOAD_LINK"
 fi
 
-echo "cleaning network dir"
-[ -d "$NETWORK_DIRECTORY/blocks" ] && rm -rf "$NETWORK_DIRECTORY/blocks"
-[ -d "$NETWORK_DIRECTORY/chainstate" ] && rm -rf "$NETWORK_DIRECTORY/chainstate"
-[ ! -d "$NETWORK_DIRECTORY" ] && mkdir "$NETWORK_DIRECTORY"
 
 echo "Extracting..."
 if ! tar -xf "$TAR_FILE" -C "$BITCOIN_DATA_DIR"; then

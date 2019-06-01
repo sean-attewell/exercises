@@ -12,6 +12,7 @@ RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
 
 # FIXME: Would be cleaner to do this in .gitpod.yml, but can't figure out how
 COPY scripts/bashrc.sh .
+RUN echo FUCK
 RUN cat bashrc.sh >> $HOME/.bashrc
 
 COPY scripts/bitcoin.conf /workspace/.bitcoin/bitcoin.conf
