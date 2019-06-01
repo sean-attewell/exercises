@@ -12,7 +12,6 @@ RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
 
 # FIXME: Would be cleaner to do this in .gitpod.yml, but can't figure out how
 COPY scripts/bashrc.sh .
-RUN echo FUCK
 RUN cat bashrc.sh >> $HOME/.bashrc
 
 #RUN echo "alias testnet-cli='bitcoin-cli -testnet -datadir=/workspace/exercises/.bitcoin'" >> $HOME/.bashrc
