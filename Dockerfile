@@ -10,4 +10,10 @@ RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
     && sudo apt-get update \
     && sudo apt-get install -yq bitcoind
 
+
+
+echo "testnet-cli='bitcoin-cli -testnet -datadir=/workspace/exercises/.bitcoin'" >> $HOME/.bashrc
+echo "testnetd='bitcoind -testnet -datadir=/workspace/exercises/.bitcoin'" >> $HOME/.bashrc
+
+
 #USER root
