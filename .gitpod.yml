@@ -2,7 +2,8 @@
 image:
     file: Dockerfile
 tasks:
-    - command: "cat bashrc >> ~/.bashrc && source ~/.bashrc"
+    # FIXME successfully writes to .bashrc but doesn't automatically load changes
+    #- command: "cat bashrc >> ~/.bashrc"
     #- command: "source ~/.bashrc"
     - command: "nohup pip3 install -r requirements.txt > /dev/null 2>&1 &"
     - command: "nohup ./bitcoin.sh > ~/.bitcoin.log 2>&1 &"
