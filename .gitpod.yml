@@ -1,4 +1,3 @@
-image: justinmoon/mooniversity:0.0.1
-#image:
-    #file: Dockerfile
-
+#image: justinmoon/mooniversity:0.0.1
+image:
+    file: Dockerfile
