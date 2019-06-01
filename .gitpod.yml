@@ -3,5 +3,5 @@ image:
     file: Dockerfile
 tasks:
     - command: >
-        pip3 install -r requirements.txt
+        pip3 install -r requirements.txt &&
         bitcoind -testnet -prune=550
