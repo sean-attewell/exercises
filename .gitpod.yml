@@ -5,7 +5,9 @@ tasks:
     # FIXME successfully writes to .bashrc but doesn't automatically load changes
     #- command: "cat bashrc >> ~/.bashrc"
     #- command: "source ~/.bashrc"
-    - command: "{ nohup pip3 install -r requirements.txt > /dev/null 2>&1 & ; exit }"
-    - command: "nohup ./bitcoin.sh > ~/.bitcoin.log 2>&1 & ; exit"
+    - command: "pip3 install -r requirements.txt && exit"
+    - command: "./bitcoin.sh > ~/.bitcoin.log && exit"
+    #- command: "nohup pip3 install -r requirements.txt > /dev/null 2>&1 & ; exit"
+    #- command: "nohup ./bitcoin.sh > ~/.bitcoin.log 2>&1 & ; exit"
     - command: "clear"
 
