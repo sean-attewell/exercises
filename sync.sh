@@ -1,3 +1,6 @@
+# TODO: abort the script if anything is in $NETWORK_DIRECTORY/blocks
+
+
 UTXO_DOWNLOAD_LINK="http://utxosets.blob.core.windows.net/public/utxo-snapshot-bitcoin-testnet-1445586.tar"
 BITCOIN_DATA_DIR="/home/gitpod/.bitcoin"
 NETWORK_DIRECTORY="$BITCOIN_DATA_DIR/testnet3"
