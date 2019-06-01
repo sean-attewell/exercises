@@ -1,2 +1,2 @@
-pip3 install -r requirements.txt
-./sync.sh
+pip3 install -r scripts/requirements.txt
+./scripts/sync.sh
