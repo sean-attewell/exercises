@@ -8,7 +8,6 @@ RUN yarn global add tldr
     #&& sudo pip3 install -r requirements.txt
 RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
     && sudo apt-get update \
-    && sudo apt-get install -yq bitcoind \
-    && python3 -m pip install -r requirements.txt
+    && sudo apt-get install -yq bitcoind
 
 #USER root
