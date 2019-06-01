@@ -1,5 +1,5 @@
 FROM gitpod/workspace-full:latest
-#USER ROOT
+USER ROOT
 RUN npm install -g tldr
 #RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
     #&& sudo apt-get update \
