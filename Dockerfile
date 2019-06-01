@@ -11,10 +11,7 @@ RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
     && sudo apt-get install -yq bitcoind
 
 
-
+# FIXME: Would be cleaner to do this in .gitpod.yml, but can't figure out how
 #RUN echo "alias testnet-cli='bitcoin-cli -testnet -datadir=/workspace/exercises/.bitcoin'" >> $HOME/.bashrc
 #RUN echo "alias mainnet-cli='bitcoin-cli -rpcuser=bitcoin -rpcpassword=python -rpcconnect=68.183.110.103'" >> $HOME/.bashrc
 #RUN echo "alias testnetd='bitcoind -testnet -datadir=/workspace/exercises/.bitcoin'" >> $HOME/.bashrc
-
-
-#USER root
