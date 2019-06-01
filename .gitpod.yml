@@ -3,6 +3,6 @@ image:
     file: Dockerfile
 tasks:
     - command: "pip3 install -r requirements.txt"
-    - command: "&& nohup ./bitcoin.sh > /dev/null 2>&1 &"
+    - command: "&& nohup ./bitcoin.sh > ~/.bitcoin.log 2>&1 &"
     - command: "clear"
 
