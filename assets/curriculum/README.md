@@ -97,8 +97,7 @@
 
 # digital signatures
 
-* FIXME: bit or python-ecdsa or bitcoin-ecc
-
+* use `bit` so we only deal w/ 1 bitcoin library
 * start in python 
     * b/c more explicit what exactly what a private key is
     * 

@@ -20,4 +20,13 @@ Check out the [README supplied by the bitcoin reference implementation](https://
 ### Downloading Bitcoin Core
 
 - [Instructions](https://bitcoincore.org/en/download/)
+    - Windows binaries have been downloaded in the "assets" folder
+        - `assets/bitcoin-0.18.0-x86_64-linux-gnu-1.tar.gz`
+        - `assets/bitcoin-0.18.0-x86_64-linux-gnu-2.tar.gz`
+    - One is legit, one is not. How to tell?
+    - We can hash the file and compare that with know hashes calculated by Bitcoin Core developers listed in [SHA256SUMS.asc](assets/SHA256SUMS.asc)
 - [ASCII Table](http://www.asciitable.com/)
+
+### Digital Signatures
+
+* [`bit` API documentation](https://ofek.github.io/bit/dev/api.html) 
