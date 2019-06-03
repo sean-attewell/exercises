@@ -6,10 +6,6 @@ Software projects frequently have "README" files that describe what the project 
 
 Check out the [README supplied by the bitcoin reference implementation](https://github.com/bitcoin/bitcoin/blob/master/README.md).
 
-### What is a "terminal"?
-
-- [Bash Crash Course](https://www.youtube.com/watch?v=oxuRxtrO2Ag) is a great resource to check out after you finish this course.
-
 ### Hal Finney
 
 ![image](./assets/images/hal.jpg)
