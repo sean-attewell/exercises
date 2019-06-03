@@ -9,6 +9,7 @@ tasks:
       command: "./assets/scripts/recurring-setup.sh"
     #- command: "nohup pip3 install -r requirements.txt > /dev/null 2>&1 & ; exit"
     #- command: "nohup ./bitcoin.sh > ~/.bitcoin.log 2>&1 & ; exit"
+    - init: "echo 'alias python=python3' >> ~/.bashrc"
     - init: "code hello.py && clear"
 
 ports:
