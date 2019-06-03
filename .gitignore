@@ -125,3 +125,4 @@ dmypy.json
 
 # Random
 .vscode/
+secret.txt
