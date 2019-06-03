@@ -5,8 +5,8 @@ tasks:
     # FIXME successfully writes to .bashrc but doesn't automatically load changes
     #- command: "cat bashrc >> ~/.bashrc"
     #- command: "source ~/.bashrc"
-    - init: "./scripts/initial-setup.sh"
-      command: "./scripts/recurring-setup.sh"
+    - init: "./assets/scripts/initial-setup.sh"
+      command: "./assets/scripts/recurring-setup.sh"
     #- command: "nohup pip3 install -r requirements.txt > /dev/null 2>&1 & ; exit"
     #- command: "nohup ./bitcoin.sh > ~/.bitcoin.log 2>&1 & ; exit"
     - init: "code hello.py && clear"
