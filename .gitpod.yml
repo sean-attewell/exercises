@@ -1,4 +1,4 @@
-image: justinmoon/mooniversity:0.0.2
+image: justinmoon/mooniversity:0.0.3
 #image:
     #file: Dockerfile
 tasks:
