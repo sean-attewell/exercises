@@ -12,4 +12,4 @@ RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
 
 # Copy over bashrc updates
 #COPY assets/scripts/bashrc.sh .
-RUN cat bashrc.sh >> $HOME/.bashrc
+#RUN cat bashrc.sh >> $HOME/.bashrc
