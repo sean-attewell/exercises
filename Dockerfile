@@ -11,5 +11,5 @@ RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
     && sudo apt-get install -yq bitcoind
 
 # Copy over bashrc updates
-COPY scripts/bashrc.sh .
+COPY assets/scripts/bashrc.sh .
 RUN cat bashrc.sh >> $HOME/.bashrc
