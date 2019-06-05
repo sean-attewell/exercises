@@ -15,3 +15,7 @@ RUN echo "export BITCOIN_DATA_DIR='/workspace/bitcoin'" >> $HOME/.bashrc \
     && echo "alias testnetd='bitcoind -testnet -datadir=$BITCOIN_DATA_DIR -prune=550'" >> $HOME/.bashrc \
     && echo "alias mainnet='bitcoin-cli -rpcuser=bitcoin -rpcpassword=python -rpcconnect=68.183.110.103'" >> $HOME/.bashrc \
     && echo "alias python='python3'" >> $HOME/.bashrc
+
+COPY assets/scripts/shutdown.sh
+ENTRYPOINT ["./shutdown.sh"]
+CMD ["/bin/bash"]
