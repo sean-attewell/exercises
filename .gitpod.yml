@@ -1,14 +1,10 @@
-#image: justinmoon/mooniversity:0.0.1
+#image: justinmoon/mooniversity:0.0.x
+
 image:
     file: Dockerfile
 tasks:
-    # FIXME successfully writes to .bashrc but doesn't automatically load changes
-    #- command: "cat bashrc >> ~/.bashrc"
-    #- command: "source ~/.bashrc"
-    - init: "./scripts/initial-setup.sh"
-      command: "./scripts/recurring-setup.sh"
-    #- command: "nohup pip3 install -r requirements.txt > /dev/null 2>&1 & ; exit"
-    #- command: "nohup ./bitcoin.sh > ~/.bitcoin.log 2>&1 & ; exit"
+    - init: "./assets/scripts/initial-setup.sh"
+      command: "./assets/scripts/recurring-setup.sh"
     - init: "code hello.py && clear"
 
 ports:
