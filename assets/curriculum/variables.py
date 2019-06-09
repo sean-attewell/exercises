@@ -10,6 +10,7 @@ hal = 'Hal Finney'
 print(satoshi + ' sent ' + hal + ' the first ever bitcoin transaction. Some think ' + hal +' was ' + satoshi)
 
 # indexing
+# REPL
 print(hal[0])
 
 # exercise: get the 'F'

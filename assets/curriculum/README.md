@@ -33,15 +33,10 @@
 * statements executed sequentially
 * special characters
 * practice get comfortable editing plain text
+* visit README to introduce hal finney
 
 # [variables.py](variables.py)
 
-* visit [README.md](README.md)
-    * left-click > open with > {preview, editor}
-        * ask them to trivially alter
-    * visit bitcoin's README
-        * open "raw"  to show how it is formatted
-        * show how exiting to the root of repo displays README
 * variables used for repeating data
 * (seque) open the repl and try the same stuff as above)
 
@@ -98,17 +93,18 @@
 # digital signatures
 
 * use `bit` so we only deal w/ 1 bitcoin library
-* start in python 
+* TODO: start in python 
     * b/c more explicit what exactly what a private key is
-    * 
-* `signatures` demo in `bitcoin-cli-1.sh`
-    * verify the signature created by `bit`
+
+* `signatures` demo in `bitcoin-cli.sh`
+    * verify the signature created by `bit` (TODO)
     * this is how craig wright could prove he holds satoshi's coins
 * practice with functions
-* mischief exercises where spreadsheet isn't editable and there are 5 statements?
+* mischief exercises where spreadsheet isn't editable and there are 3 statements?
 * demonstrate that private key is less than n (but not much less). maybe calculate what percenage less it is ...
 * generate private keys using bitcoin-cli
 * use bx to show `p*G = P`?
+* *FUND ADDRESS*
 
 # [hashing.py](hashing.py)
 
@@ -117,7 +113,7 @@
 * practice with functions
 * some hints on which one is correct:
     * `ls -alh` for file sizes
-    * `hexdump -C` for raw hex
+    * `xxd` for raw hex
     * `xxd -b` for raw bytes
 * "hopefully this gives you more confidence installing bitcoin in future!"
 
@@ -139,6 +135,8 @@
 
 # supply.py v2
 
+* proof of work demo to introduce "while" loop
+
 * 2nd 2 exercises
 
 # tx.py
@@ -157,6 +155,5 @@
 
 # missing
 
-* proof-of-work demo
 * "next steps" section in README
 * version handshake demo w/ sockets

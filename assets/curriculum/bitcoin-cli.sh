@@ -8,17 +8,13 @@ explore() {
     testnet getnettotals
 
     testnet getwalletinfo
+
+    # our problem: no money!
+    # let's get some > faucet
+
+    testnet getwalletinfo
+
 }
-
-# our problem: no money!
-# let's get some
-
-
-
-
-
-
-
 
 signatures() {
     echo "getting address"
@@ -32,10 +28,8 @@ signatures() {
     # also change 1 character in $SIGNATURE and show it doesn't work
 }
 
-signatures
 
 keys() {
     ADDRESS=$(testnet getnewaddress "" legacy)
     WIF=$(testnet dumpprivkey $ADDRESS)
-    HX=$(bx wif-to-ec $WIF)
 }

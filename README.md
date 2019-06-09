@@ -30,3 +30,7 @@ Check out the [README supplied by the bitcoin reference implementation](https://
 ### Digital Signatures
 
 * [`bit` API documentation](https://ofek.github.io/bit/dev/api.html) 
+
+### "cypherpunks write code"
+
+* https://www.activism.net/cypherpunk/manifesto.html

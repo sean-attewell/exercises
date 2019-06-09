@@ -1,53 +1,75 @@
-##########################
-# first three halvenings #
-##########################
+# ##########################
+# # first three halvenings #
+# ##########################
 
-blocks_per_halvening = 210000
-initial_subsidy = 50
+# blocks_per_halvening = 210000
+# subsidy = 50
 
-print(blocks_per_halvening * initial_subsidy)
+# print(blocks_per_halvening * subsidy)
 
-# exercise: how many satoshis before the first halvening?
+# # exercise: how many satoshis before the first halvening?
 
-# exercise: how many coins will be released before the 4th halvening?
-coins_released = 0
+# # exercise: how many coins will be released before the 4th halvening?
+# coins_released = 0
 
-coins_released += blocks_per_halvening * initial_subsidy
-coins_released += blocks_per_halvening * (initial_subsidy / 2)
-coins_released += blocks_per_halvening * (initial_subsidy / 4)
+# coins_released += blocks_per_halvening * subsidy
+# subsidy = subsidy / 2
+# coins_released += blocks_per_halvening * subsidy
+# subsidy = subsidy / 2
+# coins_released += blocks_per_halvening * subsidy
 
-print(coins_released)
+# print(coins_released)
 
-#################
-# guessing game #
-#################
+# #################
+# # guessing game #
+# #################
 
-from random import randint
+# # v1
+# import random
 
-number = randint(1, 11)
-guess = None
+# data = b'real block info'
+# nonce = 0
+# answer = random.randint(0, 1000)
 
-while number != guess:
-    guess = input('I am thinking of a number 1-10: ')
-    guess = int(guess)
+# while not nonce != answer:
+    # nonce += 1
 
-print('you got it!')
+# print(nonce)
 
-####################
-# count halvenings #
-####################
+# # v2
+
+# import hashlib
+
+
+# def hashed(d, n):
+    # d += n.to_bytes(4, 'little')
+    # return hashlib.sha256(d).hexdigest()
+
+
+# data = b'real block info'
+# nonce = 0
+# zeros_required = 6
+
+# while not hashed(data, nonce).startswith('0'*zeros_required):
+    # nonce += 1
+
+# print(nonce, hashed(data, nonce))
+
+
+# ####################
+# # count halvenings #
+# ####################
 
 blocks_per_halvening = 210_000
 sat_per_coin = 100_000_000
-initial_subsidy = 50 * sat_per_coin
-subsidy = initial_subsidy
+subsidy = 50 * sat_per_coin
 coins_issued = 0
 halvenings = 0
 
 while subsidy >= 1:
     coins_issued += blocks_per_halvening * subsidy
-    subsidy = subsidy / 2
+    subsidy = subsidy // 2
     halvenings += 1
-    print(coins_issued)
+    print(subsidy, coins_issued)
 
 print(halvenings)

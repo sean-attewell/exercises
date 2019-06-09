@@ -12,10 +12,6 @@ def load():
     f = open('secret.txt')
     key_hex = f.read()
     return bit.PrivateKeyTestnet.from_hex(key_hex)
-    
-
-
-
 
 ### after we send coins here from bitcoin-cli
 
@@ -36,6 +32,7 @@ def send(key, address):
     # go check bitcoin-cli
 
 # send(load(), "2N5cXk4t6ryeXcCRj8YHbuv9sQkyZ7h8wJy")
+# get `wif-key` using `keys` function in `bitcoin-cli.sh`
 
 def steal(wif_key):
     my_key = load()
