@@ -13,6 +13,14 @@ Check out the [README supplied by the bitcoin reference implementation](https://
 - Received [first ever Bitcoin transaction](https://blockstream.info/tx/f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16)
 - [Learn more about Hal Finney at Satoshi Nakamoto Institute](https://nakamotoinstitute.org/finney/)
 
+### 256 Bit Numbers
+
+- [link](https://www.youtube.com/watch?v=S9JGmA5_unY&t=221s)
+
+### Testnet Faucet
+
+- [Get some testnet coins!](https://testnet-faucet.mempool.co/)
+
 ### `bitcoin-cli`
 
 - [Learn more about protocol versions](https://bitcoin.org/en/developer-reference#protocol-versions)
@@ -29,8 +37,10 @@ Check out the [README supplied by the bitcoin reference implementation](https://
 
 ### Digital Signatures
 
-* [`bit` API documentation](https://ofek.github.io/bit/dev/api.html) 
+* [Mischief exercise spreadsheet](https://docs.google.com/spreadsheets/d/16B2xTU6XJ8wG2rgdSZtExLmECVP4iVNdCvmLwAdXzoU/edit#gid=0)
+* [`bit` API documentation](https://ofek.github.io/bit/dev/api.html)
 
 ### "cypherpunks write code"
 
-* https://www.activism.net/cypherpunk/manifesto.html
+* ["A Cypherpunk's Manifesto"](https://www.activism.net/cypherpunk/manifesto.html)
+
