@@ -3,7 +3,7 @@ cp assets/scripts/bitcoin.conf /workspace/bitcoin/bitcoin.conf
 
 
 # Install bitcoind
-pushd /workspace/bin
+pushd /workspace/bitcoin
 wget -O bitcoin-0.18.0-x86_64-linux-gnu.tar.gz https://bitcoincore.org/bin/bitcoin-core-0.18.0/bitcoin-0.18.0-x86_64-linux-gnu.tar.gz
 tar -xzf bitcoin-0.18.0-x86_64-linux-gnu.tar.gz && rm bitcoin-0.18.0-x86_64-linux-gnu.tar.gz
 popd
