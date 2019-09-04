@@ -4,10 +4,9 @@ USER root
 # Miscellaneous package installations
 RUN yarn global add tldr
 
-# Install bitcoin
-RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
-    && sudo apt-get update \
-    && sudo apt-get install -yq bitcoind
+# Add bitcoin aliases
+RUN echo "alias bitcoind='/workspace/bin/bitcoin-0.18.0/bin/bitcoind -datadir=/workspace/bitcoin/.bitcoin'" >> $HOME/.bash_aliases
+RUN echo "alias bitcoin-cli='/workspace/bin/bitcoin-0.18.0/bin/bitcoin-cli -datadir=/workspace/bitcoin/.bitcoin'" >> $HOME/.bash_aliases
 
 # Update bashrc
 RUN echo "export BITCOIN_DATA_DIR='/workspace/bitcoin'" >> $HOME/.bashrc \
