@@ -1,2 +1,2 @@
 # testnetd not available here even if i source bashrc ...
-bitcoind -testnet -datadir=$BITCOIN_DATA_DIR -prune=550
+/workspace/bitcoin/bitcoin-0.18.0/bin/bitcoind  -testnet -datadir=$BITCOIN_DATA_DIR -prune=550
