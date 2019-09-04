@@ -4,15 +4,14 @@ USER root
 # Miscellaneous package installations
 RUN yarn global add tldr
 
-# Install bitcoin
-RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
-    && sudo apt-get update \
-    && sudo apt-get install -yq bitcoind
+# Add bitcoin aliases
+RUN echo "alias bitcoind='/workspace/bitcoin/bitcoin-0.18.0/bin/bitcoind -datadir=/workspace/bitcoin/'" >> $HOME/.bashrc
+RUN echo "alias bitcoin-cli='/workspace/bitcoin/bitcoin-0.18.0/bin/bitcoin-cli -datadir=/workspace/bitcoin/'" >> $HOME/.bashrc
 
 # Update bashrc
 RUN echo "export BITCOIN_DATA_DIR='/workspace/bitcoin'" >> $HOME/.bashrc \
-    && echo "alias testnet='bitcoin-cli -testnet -datadir=/workspace/bitcoin -rpcuser=bitcoin -rpcpassword=python'" >> $HOME/.bashrc \
-    && echo "alias testnetd='bitcoind -testnet -datadir=/workspace/bitcoin -prune=550'" >> $HOME/.bashrc \
+    && echo "alias testnet='bitcoin-cli -testnet -rpcuser=bitcoin -rpcpassword=python'" >> $HOME/.bashrc \
+    && echo "alias testnetd='bitcoind -testnet -prune=550'" >> $HOME/.bashrc \
     && echo "alias mainnet='bitcoin-cli -rpcuser=bitcoin -rpcpassword=python -rpcconnect=68.183.110.103'" >> $HOME/.bashrc \
     && echo "alias python='python3'" >> $HOME/.bashrc \
     && echo "alias pip='pip3'" >> $HOME/.bashrc
