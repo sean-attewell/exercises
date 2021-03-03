@@ -21,3 +21,4 @@ testnet = RPC(rpc_template %
         ('bitcoin', 'python', 'localhost', 18332)) # username, password, authenticate with bitcoin node at this address, port number
 
 # ^ these things will connect to a bitcoin node
+# test change as messed up merge
