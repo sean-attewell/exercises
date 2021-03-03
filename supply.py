@@ -17,7 +17,6 @@ coins_released += ((initial_subsidy / 2) * blocks_per_halvening)
 coins_released += ((initial_subsidy / 4) * blocks_per_halvening)
 
 
-# 75% after 2 eras
 
 
 print(coins_released)
