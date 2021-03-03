@@ -34,12 +34,12 @@
 
 # ---------------------
 
-def is_pos_or_neg(x):
+def is_pos_or_neg(num):
 
 
-    if x > 0:
+    if num > 0:
         print('Positive')
-    elif x < 0:
+    elif num < 0:
         print('Negative')
     else:
         print('zero')

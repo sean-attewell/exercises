@@ -15,7 +15,9 @@ class RPC:
 
 
 rpc_template = "http://%s:%s@%s:%s"
-mainnet = RPC(rpc_template %
+mainnet = RPC(rpc_template % # instantiation of RPC class
         ('bitcoin', 'python', '68.183.110.103', 8332))
-testnet = RPC(rpc_template %
-        ('bitcoin', 'python', 'localhost', 18332))
+testnet = RPC(rpc_template % 
+        ('bitcoin', 'python', 'localhost', 18332)) # username, password, authenticate with bitcoin node at this address, port number
+
+# ^ these things will connect to a bitcoin node
