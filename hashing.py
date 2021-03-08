@@ -13,7 +13,7 @@ import sys
 filename = input("Please enter file name for hashing: ")
 
 try:
-    f = open(filename, 'r') # 'w' cleared the file out! leave in read only. 
+    f = open(filename, 'rb') # 'w' cleared the file out! leave in read only. rb reads bytes.
 except FileNotFoundError:
     print(filename + " not found!")
     sys.exit()
@@ -21,7 +21,12 @@ except FileNotFoundError:
 content = f.read()
 f.close() # Good habit not to leave a bunch of open files on your system!
 
-msg = content.encode() # Turn into bytes
-hashed = hashlib.sha256(msg).hexdigest()
+hashed = hashlib.sha256(content).hexdigest()
 
-print("The hash is: ", hashed)
+answer = '5146ac5310133fbb01439666131588006543ab5364435b748ddfc95a8cb8d63f'
+if hashed == answer:
+    print('File is legit')
+else:
+    print("File not legit")
+
+    
