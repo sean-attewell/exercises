@@ -66,4 +66,5 @@ result = Counter()
 for char in msg:
     result[char] += 1
 
+print(result)
 print(result.most_common(5))
