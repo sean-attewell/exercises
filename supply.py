@@ -1,22 +1,15 @@
 sat_per_coin = 100_000_000
-initial_subsidy = 50 * sat_per_coin
+subsidy = 50 * sat_per_coin
 blocks_per_halvening = 210_000
 coins_released = 0
+halvenings = 0
 
-# print(initial_subsidy * blocks_per_halvening) # 10.5 million bitcoins given out in the first 4 years!
-# print((initial_subsidy / 2) * blocks_per_halvening) # 5.25 million bitcoins given out in the next 4 years!
-# print((initial_subsidy / 4) * blocks_per_halvening) # 2.625 million bitcoins given out in the next 4 years!
+while subsidy >= 1: # can't give out less than 1 satoshi! I'll give satoshis until I can't give them any more!
+    coins_released += subsidy * blocks_per_halvening
+    subsidy = subsidy // 2 # division which throws out remainders, because you can't have less than a sat
+    halvenings += 1
+    print(halvenings, subsidy)
 
-# add coins released in first era
-coins_released += (initial_subsidy * blocks_per_halvening)
+print('halvenings: ', halvenings, 'coins_released: ', coins_released)
 
-# add coins released in second era
-coins_released += ((initial_subsidy / 2) * blocks_per_halvening)
-
-# add coins released in third era
-coins_released += ((initial_subsidy / 4) * blocks_per_halvening)
-
-
-
-
-print(coins_released)
+# The glory of deflation

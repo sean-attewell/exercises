@@ -100,7 +100,11 @@ writer.writeheader()
 # year is the key, summary is the value (which is a dictionary)
 # if we were using items() we could skip over first by saying for _, summary in data.items():
 
-for summary in data.values(): #got headings on csv so just need to populate rows with values
+for summary in data.values(): # got headings on csv so just need to populate rows with values
     writer.writerow(summary)
 
 f.close()
+
+
+# for summary in data.values(): # got headings on csv so just need to populate rows with values
+#     print(summary.values())
